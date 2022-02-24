@@ -24,13 +24,13 @@ public class Database {
             int skillNumber = Integer.parseInt(header[1]);
             HashMap<String, Integer> skillLevel = new HashMap<String, Integer>();
             ArrayList<String> skills = new ArrayList<>();
-            for (int k = currInd+1; k <= currInd+skills; k++) {
+            for (int k = currInd+1; k <= currInd+skillNumber; k++) {
                 String[] skillHeader = lines.get(k).split(" ");
                 skills.add(skillHeader[0]);
                 skillLevel.put(skillHeader[0], Integer.parseInt(skillHeader[1]));
             }
             workers.add(new Worker(name, skillNumber, skillLevel, skills));
-            currInd += skills;
+            currInd += skillNumber;
         }
         for (int i = workerCount; i <= projectCount; i++) {
             String[] header = lines.get(currInd).split(" ");
@@ -41,13 +41,13 @@ public class Database {
             int roleNumber = Integer.parseInt(header[4]);
             HashMap<String, Integer> roleLevel = new HashMap<String, Integer>();
             ArrayList<String> roles = new ArrayList<>();
-            for (int k = currInd+1; k <= currInd+roles; k++) {
+            for (int k = currInd+1; k <= currInd+roleNumber; k++) {
                 String[] roleHeader = lines.get(k).split(" ");
                 roles.add(roleHeader[0]);
                 roleLevel.put(roleHeader[0], Integer.parseInt(roleHeader[1]));
             }
             projects.add(new Project(name, daysNeeded, points, bestBefore, roleNumber, roleLevel, roles));
-            currInd += roles;
+            currInd += roleNumber;
         }
     }
 
