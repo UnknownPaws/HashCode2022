@@ -31,7 +31,7 @@ public class Worker {
         skillToLevel.put(skill, currentSkillLevel++);
     }
 
-    public ArrayList<String> getSkills() {
+    public ArrayList<String> getSkills() { //test
         return skills;
     }
 }
