@@ -23,7 +23,8 @@ public class Algorithm {
             }
         }
         Set set1 = new HashSet(allWorkerSkills);
-        ArrayList
+        ArrayList<String> other = new ArrayList<>(set1);
+
         for (int i = 0; i < d; i++){
             int hashSize = p.get(i).getRoles().size();
             for (int j = 0; j < hashSize; j++) {
@@ -31,7 +32,16 @@ public class Algorithm {
             }
         }
         Set set2 = new HashSet<>(allProjectSkills);
-        
+        ArrayList<String> other2 = new ArrayList<>(set2);
+
+        for (int i = 0; i < other2.size(); i ++ ){
+            for(int j = 0; j < other.size(); j++){
+                
+            }
+        }
+
+
+
 
        
     }
