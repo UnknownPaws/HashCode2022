@@ -57,4 +57,11 @@ public class Database {
         }
         return data;
     }
+    public ArrayList<Worker> getWorkers() {
+        return workers;
+    }
+
+    public ArrayList<Project> getProjects() {
+        return projects;
+    }
 }
