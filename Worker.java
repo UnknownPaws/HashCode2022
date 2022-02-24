@@ -22,4 +22,9 @@ public class Worker {
     public HashMap<String, Integer> getSkillToLevel() {
         return skillToLevel;
     }
+
+    public void increaseSkillLevel(String skill){
+        int currentSkillLevel = skillToLevel.get(skill);
+        skillToLevel.put(skill, currentSkillLevel++);
+    }
 }
